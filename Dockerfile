@@ -1,9 +1,6 @@
 FROM node:20.9.0
-RUN mkdir /usr/src/app
-RUN cd /usr/src/app
-RUN git clone https://github.com/Montheankul-K/Note-Application-Backend.git
 WORKDIR /usr/src/app
-COPY package.json ./
+RUN git clone https://github.com/Montheankul-K/Note-Application-Backend.git
 RUN npm install
 EXPOSE 3000
 RUN echo "MONGODB_USERNAME=your-mongodb-username" > .env
